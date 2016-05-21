@@ -12,18 +12,11 @@ end
 min , max = [rows,cols].min , [rows,cols].max
 rows , cols = min , max
 
-M = Array.new(rows).fill([])
-0.upto(rows - 1) do |i|
-    arr = []
-    0.upto(cols - 1) do |j|
-        arr[j] = str[_i]
-        _i += 1
-    end
-    M[i] = arr
-end
-0.upto(cols - 1) do |j|
-    0.upto(rows - 1)do |i|
-        print M[i][j]
+0.upto(cols - 1) do |i|
+    ini = 0
+    rows.times do
+        print str[i + ini] if !(str[i + ini].nil?)
+        ini += cols
     end
     print " "
 end
