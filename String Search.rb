@@ -11,9 +11,5 @@ File.open(ARGV[0]).each_line do |line|
 		end
 		i += 1
 	end
-	if expr.match(regex)
-		puts true
-	else
-		puts false
-	end
+	puts expr.match(regex) ? true : false
 end
